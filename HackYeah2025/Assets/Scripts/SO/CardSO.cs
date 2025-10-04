@@ -4,17 +4,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Product", menuName = "ScriptableObjects/Card")]
 public class CardSO : ScriptableObject
 {
-    [Header("Base info")]
+    [Header("BASE INFO")]
     public string title = "Title";
     public string description = "Description";
-    public AgeCategory ageCategory;    
+    public AgeCategory ageCategory;
+    public int probability = 100;
 
-    [Header("Effect")]
+    [Header("INSTANT EFFECT")]
     public List<StatValuePair> rightSwipeStatChanges;
     public List<StatValuePair> leftSwipeStatChanges;
 
-    [Header("Requirements")]
+    [Header("LONG TERM EFFECT")]
+    public List<LongTermStatChange> rightSwipeStatLongTermChanges;
+    public List<LongTermStatChange> leftSwipeStatLongTermChanges;
+
+    [Header("REQUIREMENTS")]
     public List<CardSO> requiredCards;
-    public List<StatValuePair> statsRequirements;
+    public List<StatRequirementData> statsRequirements;
 
 }

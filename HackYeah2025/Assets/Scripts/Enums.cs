@@ -1,7 +1,6 @@
 
 public enum AgeCategory
 {
-    Child,
     Teen,
     YoungAdult,
     Adult,

@@ -15,8 +15,18 @@ MonoBehaviour:
   title: 
   description: 
   ageCategory: 0
-  rightSwipeStatChanges: []
+  probability: 100
+  rightSwipeStatChanges:
+  - category: 0
+    value: 10
   leftSwipeStatChanges: []
-  requiredCards:
-  - {fileID: 11400000, guid: 9757eeae234c64a449711973f4909e1c, type: 2}
-  statsRequirements: []
+  rightSwipeStatLongTermChanges:
+  - category: 0
+    valueChange: 1
+    duration: 100
+  leftSwipeStatLongTermChanges: []
+  requiredCards: []
+  statsRequirements:
+  - category: 0
+    minValue: 0
+    maxValue: 83
