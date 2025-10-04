@@ -19,19 +19,25 @@ MonoBehaviour:
     Joining a Book Club'
   leftText: Hack-Yeah
   rightText: Book-club
-  ageCategory: 0
+  ageCategory: 1
   probability: 100
   rightSwipeStatChanges:
-  - category: 0
-    value: 10
-  leftSwipeStatChanges: []
-  rightSwipeStatLongTermChanges:
-  - category: 0
-    valueChange: 1
-    duration: 100
+  - category: 4
+    value: 9
+  - category: 5
+    value: 2
+  - category: 1
+    value: -5
+  leftSwipeStatChanges:
+  - category: 1
+    value: 6
+  - category: 5
+    value: 4
+  - category: 4
+    value: 5
+  - category: 3
+    value: 5
+  rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []
-  statsRequirements:
-  - category: 0
-    minValue: 0
-    maxValue: 83
+  statsRequirements: []

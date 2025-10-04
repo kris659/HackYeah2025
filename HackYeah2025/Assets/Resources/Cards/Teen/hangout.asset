@@ -23,12 +23,17 @@ MonoBehaviour:
   probability: 100
   rightSwipeStatChanges:
   - category: 0
-    value: 10
-  leftSwipeStatChanges: []
-  rightSwipeStatLongTermChanges:
-  - category: 0
-    valueChange: 1
-    duration: 100
+    value: -5
+  - category: 5
+    value: 5
+  - category: 3
+    value: -5
+  leftSwipeStatChanges:
+  - category: 5
+    value: 5
+  - category: 3
+    value: -5
+  rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []
   statsRequirements: []

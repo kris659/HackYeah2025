@@ -10,29 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
-  m_Name: videogames
+  m_Name: apartment
   m_EditorClassIdentifier: 
-  description: 'Playing Video Games All Night
+  description: 'Renting Your First Apartment
 
     OR
 
-    Spending Time with Family'
-  leftText: Games
-  rightText: Family
-  ageCategory: 0
+    Staying with Parents'
+  leftText: Apartment
+  rightText: Staying
+  ageCategory: 1
   probability: 100
   rightSwipeStatChanges:
+  - category: 0
+    value: 12
   - category: 1
-    value: -3
+    value: -4
   - category: 5
-    value: 5
+    value: -6
   leftSwipeStatChanges:
   - category: 1
-    value: 4
-  - category: 2
-    value: -6
+    value: 10
+  - category: 5
+    value: 8
+  - category: 0
+    value: -15
   - category: 3
-    value: -2
+    value: 5
   rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []

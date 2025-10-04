@@ -10,29 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
-  m_Name: videogames
+  m_Name: alcohol
   m_EditorClassIdentifier: 
-  description: 'Playing Video Games All Night
+  description: 'Drinking Alcohol at a Party
 
     OR
 
-    Spending Time with Family'
-  leftText: Games
-  rightText: Family
-  ageCategory: 0
+    Avoiding Alcohol'
+  leftText: Alcohol
+  rightText: Avoiding
+  ageCategory: 1
   probability: 100
   rightSwipeStatChanges:
+  - category: 2
+    value: 7
+  - category: 5
+    value: -5
   - category: 1
     value: -3
-  - category: 5
-    value: 5
   leftSwipeStatChanges:
+  - category: 5
+    value: 6
   - category: 1
     value: 4
   - category: 2
-    value: -6
-  - category: 3
-    value: -2
+    value: -8
+  - category: 0
+    value: -5
   rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []

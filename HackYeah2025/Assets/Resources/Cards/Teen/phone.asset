@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
-  m_Name: videogames
+  m_Name: phone
   m_EditorClassIdentifier: 
-  description: 'Playing Video Games All Night
+  description: 'Getting Your First Phone
 
     OR
 
-    Spending Time with Family'
-  leftText: Games
-  rightText: Family
+    Saving Money'
+  leftText: Phone
+  rightText: Saving
   ageCategory: 0
   probability: 100
   rightSwipeStatChanges:
+  - category: 0
+    value: 10
   - category: 1
-    value: -3
-  - category: 5
-    value: 5
+    value: -8
   leftSwipeStatChanges:
   - category: 1
-    value: 4
-  - category: 2
-    value: -6
-  - category: 3
-    value: -2
+    value: 8
+  - category: 5
+    value: 6
+  - category: 0
+    value: -12
   rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []
