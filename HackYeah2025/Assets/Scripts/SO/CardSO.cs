@@ -6,6 +6,7 @@ public class CardSO : ScriptableObject
 {
     [Header("BASE INFO")]
     //public string title = "Title";
+    [TextAreaAttribute]
     public string description = "Description";
     public string leftText = "Description";
     public string rightText = "Description";
