@@ -31,7 +31,4 @@ MonoBehaviour:
     duration: 100
   leftSwipeStatLongTermChanges: []
   requiredCards: []
-  statsRequirements:
-  - category: 0
-    minValue: 0
-    maxValue: 83
+  statsRequirements: []
