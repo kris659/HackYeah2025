@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class LongTermStatChange
+public struct LongTermStatChange
 {
     public StatsCategory category;
     public int valueChange;

@@ -5,8 +5,10 @@ using UnityEngine;
 public class CardSO : ScriptableObject
 {
     [Header("BASE INFO")]
-    public string title = "Title";
+    //public string title = "Title";
     public string description = "Description";
+    public string leftText = "Description";
+    public string rightText = "Description";
     public AgeCategory ageCategory;
     public int probability = 100;
 
