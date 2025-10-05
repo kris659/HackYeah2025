@@ -40,4 +40,7 @@ MonoBehaviour:
   rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
   requiredCards: []
-  statsRequirements: []
+  statsRequirements:
+  - category: 5
+    minValue: 40
+    maxValue: 100

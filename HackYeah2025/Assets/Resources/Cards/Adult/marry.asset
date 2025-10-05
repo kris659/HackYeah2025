@@ -39,5 +39,6 @@ MonoBehaviour:
     value: 10
   rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  requiredCards:
+  - {fileID: 11400000, guid: 2c8806702171c4c4da7b913d7df5c467, type: 2}
   statsRequirements: []
