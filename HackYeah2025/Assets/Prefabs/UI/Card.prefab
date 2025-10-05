@@ -666,7 +666,7 @@ MonoBehaviour:
   _descriptionText: {fileID: 6080044129080481583}
   _leftText: {fileID: 5905659728235351881}
   _rightText: {fileID: 6705050140461169310}
-  _fadeDuration: 1
+  _fadeDuration: 2
 --- !u!1 &6453171822384106327
 GameObject:
   m_ObjectHideFlags: 0

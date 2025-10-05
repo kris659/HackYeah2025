@@ -33,10 +33,26 @@ public class StatsUI : MonoBehaviourSingleton<StatsUI>
         if (diplayStatChange == _isPreviewActive && _currentPreviewDirection == direction)
             return;
 
-        for (int i = 0; i < _statsPreviewVisuals.Count; i++) {
-            Image previewImage = _statsPreviewVisuals[i];
-            previewImage.DOKill();
-            previewImage.fillAmount = GameplayManager.Instance.GetNewStats(direction)[i];
+
+        if (diplayStatChange) {
+            _isPreviewActive = true;
+            _currentPreviewDirection = direction;
+
+            for (int i = 0; i < _statsPreviewVisuals.Count; i++) {
+                Image previewImage = _statsPreviewVisuals[i];
+                previewImage.fillAmount = GameplayManager.Instance.GetNewStats(direction)[i] / 100f;
+                //Debug.Log("Preview: " + i + " -- " + GameplayManager.Instance.GetNewStats(direction)[i] / 100f);
+            }
+        }
+        else {
+            _isPreviewActive = false;
+            _currentPreviewDirection = direction;
+
+            for (int i = 0; i < _statsPreviewVisuals.Count; i++) {
+                Image previewImage = _statsPreviewVisuals[i];
+                previewImage.fillAmount = GameplayManager.Instance.CurrentStats[i] / 100f;
+                Debug.Log("Preview: " + i + " -- " + GameplayManager.Instance.CurrentStats[i] / 100f);
+            }
         }
 
     }
@@ -48,5 +64,10 @@ public class StatsUI : MonoBehaviourSingleton<StatsUI>
             image.DOKill();
             image.fillAmount = GameplayManager.Instance.CurrentStats[i] / 100f;
         }
+    }
+
+    public void UpdateTitle(AgeCategory currentAge)
+    {
+        _titleText.text = currentAge.ToString();
     }
 }

@@ -21,13 +21,6 @@ MonoBehaviour:
   rightText: Cooking
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 5
-    value: 2
-  - category: 4
-    value: 2
-  - category: 3
-    value: 2
   leftSwipeStatChanges:
   - category: 0
     value: 3
@@ -35,7 +28,14 @@ MonoBehaviour:
     value: -2
   - category: 3
     value: 2
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 5
+    value: 2
+  - category: 4
+    value: 2
+  - category: 3
+    value: 2
   leftSwipeStatLongTermChanges: []
+  rightSwipeStatLongTermChanges: []
   requiredCards: []
   statsRequirements: []

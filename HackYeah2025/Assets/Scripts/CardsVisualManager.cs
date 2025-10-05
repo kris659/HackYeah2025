@@ -21,7 +21,6 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
     private InputAction _pointAction;
     private Vector2 _touchStartPosition;
 
-    [SerializeField] private CardSO _testingCard;
     private bool _isPressed;
     protected override void Awake()
     {
@@ -29,11 +28,10 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
         _pointAction = InputSystem.actions.FindAction("Point2");
         _pointAction.performed += OnTouch;
+
         var clickAction = InputSystem.actions.FindAction("Click2");
         clickAction.performed += OnTouchStarted;
         clickAction.canceled += OnTouchEnded;
-
-        ShowCard(_testingCard);
     }
 
     public void ShowCard(CardSO card)
@@ -57,9 +55,9 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
         Vector2 currentPosition = _pointAction.ReadValue<Vector2>();
         float distance = _touchStartPosition.x - currentPosition.x;
 
-        _direction = distance >= 0;
-        _diplayStatChange = distance > _minSwipeShowDistance;
-        _makeDecisionOnTouchEnd = distance > _minSwipeDecisionDistance;
+        _direction = distance < 0;
+        _diplayStatChange = Mathf.Abs(distance) > _minSwipeShowDistance;
+        _makeDecisionOnTouchEnd = Mathf.Abs(distance) > _minSwipeDecisionDistance;
 
         StatsUI.Instance.UpdatePreview(_direction, _diplayStatChange);
 
@@ -72,6 +70,7 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
         if (_makeDecisionOnTouchEnd) {
             _currentCard.HideCard();
+            _cardParent.rotation = Quaternion.identity;
             GameplayManager.Instance.PlayCurrentCard(_direction);
             return;
         }
