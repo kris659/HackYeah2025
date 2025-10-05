@@ -21,23 +21,20 @@ MonoBehaviour:
   rightText: Break
   ageCategory: 1
   probability: 100
-  rightSwipeStatChanges:
-  - category: 1
-    value: 9
-  - category: 2
-    value: 6
-  - category: 0
-    value: -8
   leftSwipeStatChanges:
   - category: 0
     value: 15
   - category: 5
     value: 5
-  - category: 2
-    value: -6
   - category: 3
     value: 6
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 1
+    value: 9
+  - category: 0
+    value: -8
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []
