@@ -16,9 +16,9 @@ MonoBehaviour:
 
     OR
 
-    Working Casual'
+    Keep Your Current Job'
   leftText: New Job
-  rightText: Casual Job
+  rightText: Current Job
   ageCategory: 2
   probability: 100
   leftSwipeStatChanges:
