@@ -17,8 +17,8 @@ public class Card : MonoBehaviour
          _canvasGroup = GetComponent<CanvasGroup>();
 
         _descriptionText.text = card.description;
-        _leftText.text = card.leftText;
-        _rightText.text = card.rightText;
+        _leftText.text = card.rightText;
+        _rightText.text = card.leftText;
         _canvasGroup.alpha = 0;
         _canvasGroup.DOFade(1, _fadeDuration);
     }

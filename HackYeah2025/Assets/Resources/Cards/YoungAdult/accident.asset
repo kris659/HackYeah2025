@@ -19,14 +19,14 @@ MonoBehaviour:
   probability: 100
   leftSwipeStatChanges:
   - category: 3
-    value: -15
+    value: 15
   - category: 2
     value: -20
   - category: 1
     value: -10
   rightSwipeStatChanges:
   - category: 3
-    value: -15
+    value: 15
   - category: 2
     value: -20
   - category: 1

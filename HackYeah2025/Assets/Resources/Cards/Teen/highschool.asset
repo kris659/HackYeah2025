@@ -12,23 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: highschool
   m_EditorClassIdentifier: 
-  description: "Part-Time Job at a Cafe\nOR \nStarting to a High School"
-  leftText: Part-time
-  rightText: School
+  description: 'Starting to a High School
+
+    OR
+
+    Part-Time Job at a Cafe
+
+'
+  leftText: School
+  rightText: Part-time
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
+  leftSwipeStatChanges:
   - category: 0
     value: -25
   - category: 1
-    value: 0
-  - category: 2
     value: 0
   - category: 3
     value: 2
   - category: 5
     value: 4
-  leftSwipeStatChanges:
+  rightSwipeStatChanges:
   - category: 0
     value: 15
   - category: 1
@@ -41,10 +45,11 @@ MonoBehaviour:
     value: -10
   - category: 5
     value: 4
+  leftSwipeStatLongTermChanges: []
   rightSwipeStatLongTermChanges:
   - category: 4
     valueChange: 2
     duration: 10
-  leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []
