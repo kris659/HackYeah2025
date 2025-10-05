@@ -123,6 +123,10 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
     public void PlayCurrentCard(bool swipeDirection)
     {
+        if (_isGameFinished) {
+            MainMenu.Instance.OpenMainMenu(false);
+            return;
+        }
         _playedCards.Add(CurrentCard);
         _playedCardsDirection.Add(swipeDirection);
         UpdateStats(swipeDirection);

@@ -75,6 +75,9 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
     private void OnTouchStarted(InputAction.CallbackContext _)
     {
+        if (_currentCard == null)
+            return;
+
         if (_pointAction.ReadValue<Vector2>() == Vector2.zero) {
             DOVirtual.DelayedCall(0, () =>
             {
@@ -108,10 +111,13 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
     private void OnTouchEnded(InputAction.CallbackContext _)
     {
+        if(_cardParent == null) return;
+
         _isPressed = false;
 
         if (_makeDecisionOnTouchEnd) {
-            _currentCard.HideCard();
+            if(_currentCard != null)
+                _currentCard.HideCard();
             _cardParent.rotation = Quaternion.identity;
             GameplayManager.Instance.PlayCurrentCard(_direction);
             return;
