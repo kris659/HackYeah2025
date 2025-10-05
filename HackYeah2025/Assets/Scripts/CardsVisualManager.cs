@@ -64,7 +64,7 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
         Vector2 currentPosition = _pointAction.ReadValue<Vector2>();
         float distance = _touchStartPosition.x - currentPosition.x;
 
-        _direction = distance < 0;
+        _direction = distance > 0;
         _diplayStatChange = Mathf.Abs(distance) > _minSwipeShowDistance;
         _makeDecisionOnTouchEnd = Mathf.Abs(distance) > _minSwipeDecisionDistance;
 

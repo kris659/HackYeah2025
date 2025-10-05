@@ -9,7 +9,7 @@ public class CardSO : ScriptableObject
     //public string title = "Title";
     [TextAreaAttribute]
     public string description = "Description";
-    public string leftText = "Description";
+    public string leftText = "Left";
     public string rightText = "Description";
     public AgeCategory ageCategory;
     public int probability = 100;
