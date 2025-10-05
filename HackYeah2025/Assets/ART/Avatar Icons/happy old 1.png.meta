@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cf3cf594563feed45a8f202b960e8b6e
+guid: f1e7c84c1c3a3c34584b3112ce1e40e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5970062519449419631
-    second: stats MONEY_0
+      213: -1174463349122201952
+    second: happy old 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stats MONEY_0
+      name: happy old 1_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 135
-        width: 402
-        height: 297
+        x: 70
+        y: 0
+        width: 945
+        height: 1027
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1900851f4c3162da0800000000000000
-      internalID: -5970062519449419631
+      spriteID: 0a60bd97ec773bfe0800000000000000
+      internalID: -1174463349122201952
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stats MONEY_0: -5970062519449419631
+      happy old 1_0: -1174463349122201952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
