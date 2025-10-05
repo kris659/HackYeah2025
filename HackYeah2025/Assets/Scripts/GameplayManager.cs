@@ -10,6 +10,7 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
     private List<CardSO> _allCards;
     private List<CardSO> _playedCards = new();
+    private List<bool> _playedCardsDirection = new();
     private List<CardSO> _currentAgeCards;
 
     [SerializeField] private int[] _startingStats;
@@ -34,7 +35,7 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
         _currentAgeCategory = ageCategory;
         _currentAgeCards = _allCards.FindAll((card) => card.ageCategory == ageCategory);
         StatsUI.Instance.UpdateTitle(_currentAgeCategory);
-        Debug.Log(ageCategory.ToString() + " cards: " + _allCards.Count);
+        Debug.Log(ageCategory.ToString() + " cards: " + _currentAgeCards.Count);
     }
 
     private void SetStartingStats()
@@ -56,7 +57,6 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
         List<CardSO> possibleCards = _currentAgeCards.FindAll((card) => CanPlayCard(card)).ToList();
         CurrentCard = SelectRandomCard(possibleCards);
-        _playedCards.Add(CurrentCard);
         _currentAgeCards.Remove(CurrentCard);
         _ageCardsAmount[(int)_currentAgeCategory].value--;        
         CardsVisualManager.Instance.ShowCard(CurrentCard);
@@ -65,9 +65,15 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
     private bool CanPlayCard(CardSO card)
     {
         foreach (var cardRequiremeny in card.requiredRightCards) {
-            if(!_playedCards.Contains(cardRequiremeny)) 
+            Debug.Log("Was played: " + _playedCards.Contains(cardRequiremeny) + " " + " side: " + _playedCardsDirection[_playedCards.IndexOf(cardRequiremeny)]);
+            if(!(_playedCards.Contains(cardRequiremeny) && _playedCardsDirection[_playedCards.IndexOf(cardRequiremeny)] == true)) 
                 return false;
         }
+        foreach (var cardRequiremeny in card.requiredLeftCards) {
+            if (!(_playedCards.Contains(cardRequiremeny) && _playedCardsDirection[_playedCards.IndexOf(cardRequiremeny)] == false))
+                return false;
+        }
+
         foreach (var statRequirement in card.statsRequirements) {
             if (CurrentStats[(int)statRequirement.category] < statRequirement.minValue)
                 return false;
@@ -95,6 +101,8 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
     public void PlayCurrentCard(bool swipeDirection)
     {
+        _playedCards.Add(CurrentCard);
+        _playedCardsDirection.Add(swipeDirection);
         UpdateStats(swipeDirection);
         SelectAndStartPlayingNextCard();
     }
@@ -130,22 +138,14 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
         }
 
         if (direction) {
-            Debug.Log("Right preview: " + CurrentCard.rightSwipeStatChanges.Count);
             foreach (var statChange in CurrentCard.rightSwipeStatChanges) {
-                Debug.Log("Preview stat change: " + (int)statChange.category + " " + " " + statChange.value);
                 newStats[(int)statChange.category] += statChange.value;
             }
-            //foreach (var statChange in CurrentCard.rightSwipeStatLongTermChanges) {
-            //    _longTermEffects.Add(statChange);
-            //}
         }
         else {
             foreach (var statChange in CurrentCard.leftSwipeStatChanges) {
                 newStats[(int)statChange.category] += statChange.value;
             }
-            //foreach (var statChange in CurrentCard.leftSwipeStatLongTermChanges) {
-            //    _longTermEffects.Add(statChange);
-            //}
         }
         return newStats;
     }

@@ -42,6 +42,15 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
     private void OnTouchStarted(InputAction.CallbackContext _)
     {
+        if (_pointAction.ReadValue<Vector2>() == Vector2.zero) {
+            DOVirtual.DelayedCall(0, () =>
+            {
+                _isPressed = true;
+                _touchStartPosition = _pointAction.ReadValue<Vector2>();
+                _currentCard.transform.DOScale(Vector3.one * _scaleChange, _transitionDuration);
+            });
+            return;
+        }
         _isPressed = true;
         _touchStartPosition = _pointAction.ReadValue<Vector2>();
         _currentCard.transform.DOScale(Vector3.one * _scaleChange, _transitionDuration);
