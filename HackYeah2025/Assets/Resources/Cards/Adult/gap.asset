@@ -12,24 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: gap
   m_EditorClassIdentifier: 
-  description: 'Taking a Gap Year
-
-    OR
-
-    Keep Working'
-  leftText: Gap-Year
-  rightText: Working
+  description: 'I''m really tired of this job I would like take a long break. '
+  leftText: Take a break
+  rightText: Keep wokring
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 18
-  - category: 4
-    value: 6
-  - category: 3
-    value: 9
-  - category: 5
-    value: -8
   leftSwipeStatChanges:
   - category: 0
     value: -15
@@ -39,7 +26,17 @@ MonoBehaviour:
     value: 15
   - category: 0
     value: -10
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 18
+  - category: 4
+    value: 6
+  - category: 3
+    value: 9
+  - category: 5
+    value: -8
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

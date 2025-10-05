@@ -12,22 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: marry
   m_EditorClassIdentifier: 
-  description: 'Getting Married
-
-    OR
-
-    Stay Single'
-  leftText: Married
+  description: Should I merry the love of my life?
+  leftText: Marriage
   rightText: Single
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 15
-  - category: 1
-    value: -10
-  - category: 5
-    value: -6
   leftSwipeStatChanges:
   - category: 1
     value: 20
@@ -37,8 +26,16 @@ MonoBehaviour:
     value: -30
   - category: 3
     value: 10
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 15
+  - category: 1
+    value: -10
+  - category: 5
+    value: -6
   leftSwipeStatLongTermChanges: []
-  requiredCards:
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards:
   - {fileID: 11400000, guid: 2c8806702171c4c4da7b913d7df5c467, type: 2}
+  requiredLeftCards: []
   statsRequirements: []

@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: chores
   m_EditorClassIdentifier: 
-  description: 'Doing House Chores
-
-    OR
-
-    Cooking A Meal for Family'
-  leftText: Chores
+  description: My house is in chaos, I should clean it. Also my family is coming,
+    I could make a lunch for them.
+  leftText: Cleaning
   rightText: Cooking
   ageCategory: 0
   probability: 100
@@ -37,5 +34,6 @@ MonoBehaviour:
     value: 2
   leftSwipeStatLongTermChanges: []
   rightSwipeStatLongTermChanges: []
-  requiredCards: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

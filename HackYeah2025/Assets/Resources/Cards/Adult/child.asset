@@ -12,24 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: child
   m_EditorClassIdentifier: 
-  description: 'Having a Child
-
-    OR
-
-    Focusing on Career'
+  description: I'm dreaming of having a child, unfortunately I would have to leave
+    my current job to make it.
   leftText: Child
   rightText: Career
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 20
-  - category: 4
-    value: 10
-  - category: 1
-    value: -12
-  - category: 5
-    value: -6
   leftSwipeStatChanges:
   - category: 1
     value: 25
@@ -41,8 +29,18 @@ MonoBehaviour:
     value: -5
   - category: 3
     value: 8
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 20
+  - category: 4
+    value: 10
+  - category: 1
+    value: -12
+  - category: 5
+    value: -6
   leftSwipeStatLongTermChanges: []
-  requiredCards:
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards:
   - {fileID: 11400000, guid: 33d08389ef76b4347aacc6b747d120c5, type: 2}
+  requiredLeftCards: []
   statsRequirements: []

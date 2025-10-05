@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: accident
   m_EditorClassIdentifier: 
-  description: Car Accident
-  leftText: Accident
-  rightText: Accident
+  description: I've been in a car crash.
+  leftText: 
+  rightText: 
   ageCategory: 1
   probability: 100
   leftSwipeStatChanges:

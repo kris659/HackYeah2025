@@ -12,22 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: shopping
   m_EditorClassIdentifier: 
-  description: 'Going Shopping with Friends
-
-    OR
-
-    Saving Allowance'
+  description: My friends are going shopping today. Should I go with them or decline
+    this time and save some money.
   leftText: Shop
   rightText: Saving
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 3
-    value: 3
-  - category: 0
-    value: 8
-  - category: 5
-    value: -3
   leftSwipeStatChanges:
   - category: 0
     value: -10
@@ -35,7 +25,15 @@ MonoBehaviour:
     value: 7
   - category: 1
     value: 4
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 3
+    value: 3
+  - category: 0
+    value: 8
+  - category: 5
+    value: -3
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

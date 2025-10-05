@@ -10,29 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
-  m_Name: party
+  m_Name: smokeagain
   m_EditorClassIdentifier: 
-  description: A shool party is happening today! Unfortunately I have an exam tomorrow.
-  leftText: Party
-  rightText: Exam
-  ageCategory: 0
-  probability: 100
+  description: After smoking last time you feel the urge to do it again
+  leftText: Cigarette
+  rightText: No smoking
+  ageCategory: 1
+  probability: 400
   leftSwipeStatChanges:
-  - category: 5
-    value: 8
-  - category: 1
-    value: 6
   - category: 0
+    value: -1
+  - category: 2
     value: -5
-  rightSwipeStatChanges:
-  - category: 4
-    value: 12
-  - category: 1
-    value: -4
   - category: 3
-    value: 6
+    value: -3
+  rightSwipeStatChanges:
+  - category: 3
+    value: 10
   leftSwipeStatLongTermChanges: []
   rightSwipeStatLongTermChanges: []
   requiredRightCards: []
-  requiredLeftCards: []
+  requiredLeftCards:
+  - {fileID: 11400000, guid: bc63b6ee0ee17824bb86ab340f47bf78, type: 2}
   statsRequirements: []

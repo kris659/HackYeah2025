@@ -12,22 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: gym
   m_EditorClassIdentifier: 
-  description: 'Starting Gym
-
-    OR
-
-    Ignoring Health'
-  leftText: Gym
-  rightText: Ignore
+  description: I was planning on joining Gym Classes. Why is it so expensive?
+  leftText: Join gym
+  rightText: Save money
   ageCategory: 1
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 10
-  - category: 1
-    value: 5
-  - category: 2
-    value: -8
   leftSwipeStatChanges:
   - category: 2
     value: 9
@@ -37,7 +26,15 @@ MonoBehaviour:
     value: -6
   - category: 3
     value: 3
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 10
+  - category: 1
+    value: 5
+  - category: 2
+    value: -8
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

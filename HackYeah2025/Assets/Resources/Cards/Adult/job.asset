@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: job
   m_EditorClassIdentifier: 
-  description: 'Starting a New Job
-
-    OR
-
-    Keep Your Current Job'
+  description: I could get a new job and learn something new. Should I do it?
   leftText: New Job
   rightText: Current Job
   ageCategory: 2

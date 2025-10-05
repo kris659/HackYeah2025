@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: fired
   m_EditorClassIdentifier: 
-  description: Getting Fired Due to Job Market Crush
+  description: Job market crushed! You are fired...
   leftText: Fired
   rightText: Fired
   ageCategory: 2

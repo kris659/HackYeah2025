@@ -12,20 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: business
   m_EditorClassIdentifier: 
-  description: 'Starting a Business
-
-    OR
-
-    Keeping a Stable Job'
+  description: I really would like to start my own business, but maybe should I keep
+    my stable job for future security.
   leftText: Business
   rightText: Stable Job
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 1
-    value: -15
-  - category: 0
-    value: -15
   leftSwipeStatChanges:
   - category: 0
     value: -35
@@ -35,7 +27,13 @@ MonoBehaviour:
     value: 10
   - category: 3
     value: 25
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 1
+    value: -15
+  - category: 0
+    value: -15
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

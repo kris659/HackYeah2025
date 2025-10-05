@@ -12,20 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: school club
   m_EditorClassIdentifier: 
-  description: 'Joining a School Club
-
-    OR
-
-    Skipping Club Activities'
-  leftText: Club
-  rightText: Skipping
+  description: There is a School Club that I wanted to join. Unfortunately I'm afraid
+    of meeting new people.
+  leftText: Join
+  rightText: Stay at home
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 1
-    value: 6
-  - category: 5
-    value: -5
   leftSwipeStatChanges:
   - category: 5
     value: 7
@@ -35,7 +27,13 @@ MonoBehaviour:
     value: 2
   - category: 0
     value: -3
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 1
+    value: 6
+  - category: 5
+    value: -5
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

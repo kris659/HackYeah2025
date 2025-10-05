@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: highschool
   m_EditorClassIdentifier: 
-  description: 'Starting to a High School
-
-    OR
-
-    Part-Time Job at a Cafe
+  description: 'Should I focus on Highschool or get a part-time job at a local Cafe
 
 '
   leftText: School

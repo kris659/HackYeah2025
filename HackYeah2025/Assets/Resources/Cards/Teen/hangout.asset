@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: hangout
   m_EditorClassIdentifier: 
-  description: 'Hanging out with Friends
-
-    OR
-
-    Going on a Date'
+  description: I was supposed to meet with friends today, but HE asked me out! What
+    should I do?
   leftText: Friends
   rightText: Date
   ageCategory: 0
   probability: 100
+  leftSwipeStatChanges:
+  - category: 5
+    value: 5
+  - category: 3
+    value: -5
   rightSwipeStatChanges:
   - category: 0
     value: -5
@@ -28,12 +30,8 @@ MonoBehaviour:
     value: 5
   - category: 3
     value: -5
-  leftSwipeStatChanges:
-  - category: 5
-    value: 5
-  - category: 3
-    value: -5
-  rightSwipeStatLongTermChanges: []
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

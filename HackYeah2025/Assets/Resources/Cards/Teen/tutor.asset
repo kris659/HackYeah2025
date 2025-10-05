@@ -12,22 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: tutor
   m_EditorClassIdentifier: 
-  description: 'Skipping Class
-
-    OR
-
-    Attending Extra Tutoring'
-  leftText: Skipping
-  rightText: Tutor
+  description: I'm really tired, I don't want to go to school today. I've got a lot
+    of important classes today.
+  leftText: Skip school
+  rightText: Attend classes
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 4
-    value: 12
-  - category: 1
-    value: -4
-  - category: 3
-    value: 5
   leftSwipeStatChanges:
   - category: 4
     value: -8
@@ -35,7 +25,15 @@ MonoBehaviour:
     value: 6
   - category: 3
     value: -3
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 4
+    value: 12
+  - category: 1
+    value: -4
+  - category: 3
+    value: 5
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

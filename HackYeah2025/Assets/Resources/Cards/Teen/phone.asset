@@ -12,20 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: phone
   m_EditorClassIdentifier: 
-  description: 'Getting Your First Phone
-
-    OR
-
-    Saving Money'
+  description: The new IPhone came out today! It's so expesive, maybe I should save
+    money instead?
   leftText: Phone
   rightText: Saving
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 10
-  - category: 1
-    value: -8
   leftSwipeStatChanges:
   - category: 1
     value: 8
@@ -33,7 +25,13 @@ MonoBehaviour:
     value: 6
   - category: 0
     value: -12
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 10
+  - category: 1
+    value: -8
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

@@ -12,22 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: house
   m_EditorClassIdentifier: 
-  description: 'Buying a House
-
-    OR
-
-    Renting an Apartment'
-  leftText: Buy
-  rightText: Rent
+  description: I could buy a house or rent a small flat.
+  leftText: House
+  rightText: Flat
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 15
-  - category: 1
-    value: -6
-  - category: 3
-    value: 4
   leftSwipeStatChanges:
   - category: 1
     value: 15
@@ -35,7 +24,15 @@ MonoBehaviour:
     value: -30
   - category: 3
     value: -10
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 15
+  - category: 1
+    value: -6
+  - category: 3
+    value: 4
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

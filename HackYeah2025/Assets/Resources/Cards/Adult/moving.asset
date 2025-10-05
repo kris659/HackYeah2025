@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: moving
   m_EditorClassIdentifier: 
-  description: 'Moving to a New City
+  description: 'Should I move to a new city to get more opportunities?
 
-    OR
-
-    Staying in Your Hometown'
-  leftText: Moving
-  rightText: Staying
+    Staying
+    in my hometown would save some money.'
+  leftText: Move
+  rightText: Stay
   ageCategory: 2
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: 10
-  - category: 2
-    value: 5
-  - category: 1
-    value: -6
-  - category: 5
-    value: -5
   leftSwipeStatChanges:
   - category: 1
     value: 12
@@ -39,7 +29,17 @@ MonoBehaviour:
     value: -15
   - category: 3
     value: 6
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: 10
+  - category: 2
+    value: 5
+  - category: 1
+    value: -6
+  - category: 5
+    value: -5
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

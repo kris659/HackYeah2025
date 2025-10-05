@@ -12,20 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: sneaker
   m_EditorClassIdentifier: 
-  description: 'Going on a School Trip
-
-    OR
-
-    Buying New Sneakers'
+  description: I've saved some money. Should I go on a School Trip or buy new Sneakers
   leftText: Trip
-  rightText: Sneaker
+  rightText: Sneakers
   ageCategory: 0
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: -10
-  - category: 1
-    value: 8
   leftSwipeStatChanges:
   - category: 4
     value: 2
@@ -35,7 +26,13 @@ MonoBehaviour:
     value: -14
   - category: 1
     value: 6
-  rightSwipeStatLongTermChanges: []
+  rightSwipeStatChanges:
+  - category: 0
+    value: -10
+  - category: 1
+    value: 8
   leftSwipeStatLongTermChanges: []
-  requiredCards: []
+  rightSwipeStatLongTermChanges: []
+  requiredRightCards: []
+  requiredLeftCards: []
   statsRequirements: []

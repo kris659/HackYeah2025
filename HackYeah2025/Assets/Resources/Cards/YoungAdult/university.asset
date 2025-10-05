@@ -12,22 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01041b5c87c43b24dbe61c4b62231ef6, type: 3}
   m_Name: university
   m_EditorClassIdentifier: 
-  description: 'Part-Time Job at a Restaurant
-
-    OR
-
-    Starting to a University'
-  leftText: Part-time
+  description: Should I work part-time at a Restaurant. Instead I could enroll in
+    a University.
+  leftText: Job
   rightText: University
   ageCategory: 1
   probability: 100
-  rightSwipeStatChanges:
-  - category: 0
-    value: -25
-  - category: 5
-    value: 15
-  - category: 3
-    value: 5
   leftSwipeStatChanges:
   - category: 0
     value: 15
@@ -37,11 +27,19 @@ MonoBehaviour:
     value: 2
   - category: 4
     value: -10
+  rightSwipeStatChanges:
+  - category: 0
+    value: -25
+  - category: 5
+    value: 15
+  - category: 3
+    value: 5
+  leftSwipeStatLongTermChanges: []
   rightSwipeStatLongTermChanges:
   - category: 4
     valueChange: 2
     duration: 10
-  leftSwipeStatLongTermChanges: []
-  requiredCards:
+  requiredRightCards:
   - {fileID: 11400000, guid: f714e7febeec53a4593b0cb2f454bc89, type: 2}
+  requiredLeftCards: []
   statsRequirements: []
