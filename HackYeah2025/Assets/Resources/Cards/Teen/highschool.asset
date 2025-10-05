@@ -19,8 +19,8 @@ MonoBehaviour:
     Part-Time Job at a Cafe
 
 '
-  leftText: Part-time
-  rightText: School
+  leftText: School
+  rightText: Part-time
   ageCategory: 0
   probability: 100
   leftSwipeStatChanges:
