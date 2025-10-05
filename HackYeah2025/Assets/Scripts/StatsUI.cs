@@ -41,7 +41,6 @@ public class StatsUI : MonoBehaviourSingleton<StatsUI>
             for (int i = 0; i < _statsPreviewVisuals.Count; i++) {
                 Image previewImage = _statsPreviewVisuals[i];
                 previewImage.fillAmount = GameplayManager.Instance.GetNewStats(direction)[i] / 100f;
-                //Debug.Log("Preview: " + i + " -- " + GameplayManager.Instance.GetNewStats(direction)[i] / 100f);
             }
         }
         else {
@@ -51,7 +50,6 @@ public class StatsUI : MonoBehaviourSingleton<StatsUI>
             for (int i = 0; i < _statsPreviewVisuals.Count; i++) {
                 Image previewImage = _statsPreviewVisuals[i];
                 previewImage.fillAmount = GameplayManager.Instance.CurrentStats[i] / 100f;
-                Debug.Log("Preview: " + i + " -- " + GameplayManager.Instance.CurrentStats[i] / 100f);
             }
         }
 
