@@ -209,23 +209,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205681916169031954, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 127
+      value: 423
       objectReference: {fileID: 0}
     - target: {fileID: 205681916169031954, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 283
+      value: 373
       objectReference: {fileID: 0}
     - target: {fileID: 205681916169031954, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 205681916169031954, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.33
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 205681916169031954, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.33
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 730818480280046973, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_text
@@ -240,7 +240,7 @@ PrefabInstance:
     - target: {fileID: 7667579246975862893, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4340187507238130826, guid: 0fd65a859467309418bda14d93787ea7, type: 3}
+      objectReference: {fileID: 8049017603151459382, guid: 645d379b6c0caec409064a78fb273492, type: 3}
     - target: {fileID: 8131459598016251567, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -548,12 +548,12 @@ MonoBehaviour:
   - category: 3
     value: 8
   _winCard: {fileID: 11400000, guid: 89e0953a5c08c2142b6de6e973efad04, type: 2}
-  _looseMoneyCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
-  _looseHappinessCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
-  _looseHealthCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
-  _looseStressCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
-  _looseEducationCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
-  _looseSocializationCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseMoneyCard: {fileID: 11400000, guid: 8ab5f397ea301ab47bd2b71649409540, type: 2}
+  _looseHappinessCard: {fileID: 11400000, guid: 7375138588b32b44cb803f4983ec0101, type: 2}
+  _looseHealthCard: {fileID: 11400000, guid: b75a0a4e670f13340afabf9052c04dde, type: 2}
+  _looseStressCard: {fileID: 11400000, guid: f0bb451c9f59d6343ac4947161e10a04, type: 2}
+  _looseEducationCard: {fileID: 11400000, guid: 078133f5d33c9274fae0a0434c667a30, type: 2}
+  _looseSocializationCard: {fileID: 11400000, guid: 79dfc6abb5cea0a4d98932e8e8e6c29a, type: 2}
 --- !u!1 &327118513
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +851,19 @@ MonoBehaviour:
   _rotationSpeedMult: 17.5
   _transitionDuration: 0.3
   _scaleChange: 1.05
+  _ageIcons:
+  - age: 0
+    happyIcon: {fileID: -7269622708981977777, guid: ffce22387ced8a64098c5518ec9acd77, type: 3}
+    sadIcon: {fileID: -7881414284890356871, guid: 29e4849e80ddf7e4dae0dada29d4f01a, type: 3}
+  - age: 1
+    happyIcon: {fileID: -587783128891979754, guid: ddfd432ef80d7b549a1285fe333c16ca, type: 3}
+    sadIcon: {fileID: -8012750582664421058, guid: 7d68354008534c34ca2e2999eaf00206, type: 3}
+  - age: 2
+    happyIcon: {fileID: 1489056525157208029, guid: 9ba521bda2905a94090df2ddb78bd82d, type: 3}
+    sadIcon: {fileID: 1640993793755146763, guid: 69fbbb010bd97294db8abf18fee0b6a1, type: 3}
+  - age: 3
+    happyIcon: {fileID: -1174463349122201952, guid: f1e7c84c1c3a3c34584b3112ce1e40e3, type: 3}
+    sadIcon: {fileID: 6966433154570669147, guid: 44dfe88a04d5bb04e8a8b5fcc965e18e, type: 3}
 --- !u!1001 &667334353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1441,7 +1454,7 @@ PrefabInstance:
     - target: {fileID: 7667579246975862893, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5970062519449419631, guid: cf3cf594563feed45a8f202b960e8b6e, type: 3}
+      objectReference: {fileID: 4399977924773421992, guid: d4f0c32fb1b4e2249ae67e3eb405a71d, type: 3}
     - target: {fileID: 8131459598016251567, guid: c19ff680cb634da4aa185664835201fa, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -1,9 +1,19 @@
 using DG.Tweening;
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 {
+    [System.Serializable]
+    public struct AgeIcons
+    {
+        public AgeCategory age;
+        public Sprite happyIcon;
+        public Sprite sadIcon;
+    }
+
     [SerializeField] private GameObject _cardPrefab;
     [SerializeField] private Transform _cardParent;
 
@@ -13,6 +23,8 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
     [SerializeField] private float _transitionDuration;
     [SerializeField] private float _scaleChange;
 
+    [SerializeField] private List<AgeIcons> _ageIcons;
+
     private Card _currentCard;
     private bool _direction;
     private bool _diplayStatChange;
@@ -20,6 +32,8 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
 
     private InputAction _pointAction;
     private Vector2 _touchStartPosition;
+
+
 
     private bool _isPressed;
     protected override void Awake()
@@ -37,7 +51,26 @@ public class CardsVisualManager : MonoBehaviourSingleton<CardsVisualManager>
     public void ShowCard(CardSO card)
     {
         _currentCard = Instantiate(_cardPrefab, _cardParent).GetComponent<Card>();
-        _currentCard.ShowCard(card);
+        Sprite icon = GetCurrentIcon();
+        _currentCard.ShowCard(card, icon);
+    }
+
+    private Sprite GetCurrentIcon()
+    {
+        bool isHappy = true;
+        for (int i = 0; i < GameplayManager.Instance.CurrentStats.Length; i++) {
+            if (i == (int)StatsCategory.Stress && GameplayManager.Instance.CurrentStats[i] > 70)
+                isHappy = false;
+            if (i != (int)StatsCategory.Stress && GameplayManager.Instance.CurrentStats[i] < 30)
+                isHappy = false;
+        }
+
+        foreach (var ageData in _ageIcons) {
+            if(ageData.age == GameplayManager.Instance.CurrentAgeCategory) {                
+                return isHappy ? ageData.happyIcon : ageData.sadIcon;
+            }
+        }
+        return null;
     }
 
     private void OnTouchStarted(InputAction.CallbackContext _)

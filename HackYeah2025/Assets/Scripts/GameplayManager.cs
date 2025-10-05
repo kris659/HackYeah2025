@@ -7,6 +7,8 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 {
     public CardSO CurrentCard { get; private set; }
     public int[] CurrentStats { get; private set; }
+    public AgeCategory CurrentAgeCategory { get; private set; }
+
 
     private List<CardSO> _allCards;
     private List<CardSO> _playedCards = new();
@@ -26,7 +28,6 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
     [SerializeField] private CardSO _looseEducationCard;
     [SerializeField] private CardSO _looseSocializationCard;
 
-    private AgeCategory _currentAgeCategory;
 
     private List<LongTermStatChange> _longTermEffects = new();
 
@@ -44,9 +45,9 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
     private void StartAge(AgeCategory ageCategory)
     {
-        _currentAgeCategory = ageCategory;
+        CurrentAgeCategory = ageCategory;
         _currentAgeCards = _allCards.FindAll((card) => card.ageCategory == ageCategory);
-        StatsUI.Instance.UpdateTitle(_currentAgeCategory);
+        StatsUI.Instance.UpdateTitle(CurrentAgeCategory);
         Debug.Log(ageCategory.ToString() + " cards: " + _currentAgeCards.Count);
     }
 
@@ -61,19 +62,19 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
         if(_isGameFinished)
             return;
 
-        if (_ageCardsAmount[(int)_currentAgeCategory].value <= 0) {
-            _currentAgeCategory++;
-            if((int)_currentAgeCategory >= _ageCardsAmount.Count) {
+        if (_ageCardsAmount[(int)CurrentAgeCategory].value <= 0) {
+            CurrentAgeCategory++;
+            if((int)CurrentAgeCategory >= _ageCardsAmount.Count) {
                 Win();
                 return;
             }
-            StartAge(_currentAgeCategory);
+            StartAge(CurrentAgeCategory);
         }
 
         List<CardSO> possibleCards = _currentAgeCards.FindAll((card) => CanPlayCard(card)).ToList();
         CurrentCard = SelectRandomCard(possibleCards);
         _currentAgeCards.Remove(CurrentCard);
-        _ageCardsAmount[(int)_currentAgeCategory].value--;        
+        _ageCardsAmount[(int)CurrentAgeCategory].value--;        
         CardsVisualManager.Instance.ShowCard(CurrentCard);
     }
 
