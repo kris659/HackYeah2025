@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "Product", menuName = "ScriptableObjects/Card")]
 public class CardSO : ScriptableObject
@@ -14,15 +15,17 @@ public class CardSO : ScriptableObject
     public int probability = 100;
 
     [Header("INSTANT EFFECT")]
-    public List<StatValuePair> rightSwipeStatChanges;
     public List<StatValuePair> leftSwipeStatChanges;
+    public List<StatValuePair> rightSwipeStatChanges;
 
     [Header("LONG TERM EFFECT")]
-    public List<LongTermStatChange> rightSwipeStatLongTermChanges;
     public List<LongTermStatChange> leftSwipeStatLongTermChanges;
+    public List<LongTermStatChange> rightSwipeStatLongTermChanges;
 
     [Header("REQUIREMENTS")]
-    public List<CardSO> requiredCards;
+    [FormerlySerializedAs("requiredCards")]
+    public List<CardSO> requiredRightCards;
+    public List<CardSO> requiredLeftCards;
     public List<StatRequirementData> statsRequirements;
 
 }

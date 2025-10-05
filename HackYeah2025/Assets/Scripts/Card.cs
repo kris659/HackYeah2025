@@ -25,6 +25,7 @@ public class Card : MonoBehaviour
 
     public void HideCard()
     {
-        _canvasGroup.DOFade(0, _fadeDuration);
+        transform.SetParent(null);
+        _canvasGroup.DOFade(0, _fadeDuration).SetEase(Ease.InQuad).onComplete = () => Destroy(gameObject);
     }
 }
