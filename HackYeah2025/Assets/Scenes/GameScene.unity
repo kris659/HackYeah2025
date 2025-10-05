@@ -537,6 +537,13 @@ MonoBehaviour:
     value: 8
   - category: 3
     value: 8
+  _winCard: {fileID: 11400000, guid: 89e0953a5c08c2142b6de6e973efad04, type: 2}
+  _looseMoneyCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseHappinessCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseHealthCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseStressCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseEducationCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
+  _looseSocializationCard: {fileID: 11400000, guid: 5a9df4c2c595f6f4d8120a067acb988f, type: 2}
 --- !u!1 &327118513
 GameObject:
   m_ObjectHideFlags: 0

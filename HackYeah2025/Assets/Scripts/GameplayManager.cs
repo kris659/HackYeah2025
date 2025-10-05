@@ -16,9 +16,21 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
     [SerializeField] private int[] _startingStats;
     [SerializeField] private List<AgeStatValuePair> _ageCardsAmount;
 
+
+    [SerializeField] private CardSO _winCard;
+
+    [SerializeField] private CardSO _looseMoneyCard;
+    [SerializeField] private CardSO _looseHappinessCard;
+    [SerializeField] private CardSO _looseHealthCard;
+    [SerializeField] private CardSO _looseStressCard;
+    [SerializeField] private CardSO _looseEducationCard;
+    [SerializeField] private CardSO _looseSocializationCard;
+
     private AgeCategory _currentAgeCategory;
 
     private List<LongTermStatChange> _longTermEffects = new();
+
+    private bool _isGameFinished;
 
 
     private void Start()
@@ -46,10 +58,13 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
 
     private void SelectAndStartPlayingNextCard()
     {
+        if(_isGameFinished)
+            return;
+
         if (_ageCardsAmount[(int)_currentAgeCategory].value <= 0) {
             _currentAgeCategory++;
             if((int)_currentAgeCategory >= _ageCardsAmount.Count) {
-                Debug.Log("YOU WON");
+                Win();
                 return;
             }
             StartAge(_currentAgeCategory);
@@ -62,11 +77,17 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
         CardsVisualManager.Instance.ShowCard(CurrentCard);
     }
 
+    private void Win()
+    {
+        _isGameFinished = true;
+        CurrentCard = _winCard;
+        CardsVisualManager.Instance.ShowCard(CurrentCard);
+    }
+
     private bool CanPlayCard(CardSO card)
     {
-        foreach (var cardRequiremeny in card.requiredRightCards) {
-            Debug.Log("Was played: " + _playedCards.Contains(cardRequiremeny) + " " + " side: " + _playedCardsDirection[_playedCards.IndexOf(cardRequiremeny)]);
-            if(!(_playedCards.Contains(cardRequiremeny) && _playedCardsDirection[_playedCards.IndexOf(cardRequiremeny)] == true)) 
+        foreach (var cardRequirement in card.requiredRightCards) {
+            if(!(_playedCards.Contains(cardRequirement) && _playedCardsDirection[_playedCards.IndexOf(cardRequirement)] == true)) 
                 return false;
         }
         foreach (var cardRequiremeny in card.requiredLeftCards) {
@@ -104,7 +125,42 @@ public class GameplayManager : MonoBehaviourSingleton<GameplayManager>
         _playedCards.Add(CurrentCard);
         _playedCardsDirection.Add(swipeDirection);
         UpdateStats(swipeDirection);
+        if (CheckLooseRequirements())
+            return;
+        
         SelectAndStartPlayingNextCard();
+    }
+
+    private bool CheckLooseRequirements()
+    {
+        CardSO looseCard = null;
+        if (CurrentStats[(int)StatsCategory.Money] <= 0) {
+            looseCard = _looseMoneyCard;
+        }
+        if (CurrentStats[(int)StatsCategory.Happiness] <= 0) {
+            looseCard = _looseHappinessCard;
+        }
+        if (CurrentStats[(int)StatsCategory.Health] <= 0) {
+            looseCard = _looseHealthCard;
+        }
+        if (CurrentStats[(int)StatsCategory.Stress] >= 100) {
+            looseCard = _looseStressCard;
+        }
+        if (CurrentStats[(int)StatsCategory.Education] <= 0) {
+            looseCard = _looseEducationCard;
+        }
+        if (CurrentStats[(int)StatsCategory.Socialization] <= 0) {
+            looseCard = _looseSocializationCard;
+        }
+
+        if (looseCard != null) {
+            _isGameFinished = true;
+            CurrentCard = looseCard;
+            CardsVisualManager.Instance.ShowCard(CurrentCard);
+            return true;
+        }
+        
+        return false;
     }
 
     private void UpdateStats(bool swipeDirection)
