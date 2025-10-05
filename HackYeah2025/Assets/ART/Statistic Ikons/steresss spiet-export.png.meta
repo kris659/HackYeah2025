@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 77c8dcbd3d2b8c945a6b0011d3beda0e
+guid: 645d379b6c0caec409064a78fb273492
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7146082052761729723
-    second: steresss spiet_0
-  - first:
-      213: -8818938413164288481
-    second: steresss spiet_1
+      213: 8049017603151459382
+    second: steresss spiet-export_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steresss spiet_0
+      name: steresss spiet-export_0
       rect:
         serializedVersion: 2
         x: 71
         y: 0
         width: 423
-        height: 363
+        height: 373
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 545c75d0c3404dc90800000000000000
-      internalID: -7146082052761729723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: steresss spiet_1
-      rect:
-        serializedVersion: 2
-        x: 374
-        y: 358
-        width: 79
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f16ab4bec36dc9580800000000000000
-      internalID: -8818938413164288481
+      spriteID: 63475b25ddad3bf60800000000000000
+      internalID: 8049017603151459382
       vertices: []
       indices: 
       edges: []
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      steresss spiet_0: -7146082052761729723
-      steresss spiet_1: -8818938413164288481
+      steresss spiet-export_0: 8049017603151459382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
